@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+<div class="home-page">
+    <h1>{{ title }}</h1>
+</div>
+<div class="page1">
+   <div class="navbar">
+       <h1>Home</h1>
+   </div>
+   <form method="post" action="/submit">
+       <div class="wrapper">
+           <h1 class="wrapper-title">Reservation</h1>
+           <div class="input-box">
+               <label for="reservation_name">Reservation Name (Full Name):</label>
+               <input type="text" name="reservation_name" id="reservation_name" required placeholder="Name">
+               <box-icon name="rename"></box-icon>
+               <br>
+           </div>
+
+           <div class="input-box">
+               <label for="reservation_date">Reservation Date (mm/dd/yyyy):</label>
+               <input type="text" name="reservation_date" id="reservation_date" required placeholder="Date">
+               <br>
+           </div>
+
+           <div class="input-box">
+               <label for="reservation_details">Reservation Details (What do you want to use?):</label>
+               <input type="text" name="reservation_details" id="reservation_details" required placeholder="Details">
+               <br>
+           </div>
+           <input class="submit" type="submit" value="Submit">
+       </div>
+   </form>
+</div>
+{% endblock %}
